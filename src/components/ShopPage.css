@@ -1,0 +1,131 @@
+/* src/components/ShopPage.css */
+.shop-page {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 110px;
+}
+
+.shop-content {
+    padding: 3px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    width: 30%;
+    height: 1200px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .product {
+        width: 45%;
+        height: 800px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product {
+        width: 60%;
+        height: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 80%;
+        height: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 3px 3px 9px rgb(39, 3, 39);
+}
+.product:hover .product-image img {
+    opacity: 0.6;
+}
+.product-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.product-details {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100%;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.60);
+    transition: 0.5s ease-in;
+}
+
+.product-details h2 {
+    font-size: 2.5rem;
+}
+
+.product-details p {
+    font-size: 1.5rem;
+}
+
+.product:hover .product-details {
+    margin-left: 0;
+    opacity: 1;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #3c0056;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #260026;
+}
